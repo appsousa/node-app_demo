@@ -1,0 +1,76 @@
+.notifications-container {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  width: 320px;
+  max-width: calc(100% - 40px);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.notification {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.3s ease, fadeOut 0.3s ease 4.7s;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.notification-success {
+  border-left: 4px solid #28a745;
+}
+
+.notification-error {
+  border-left: 4px solid #dc3545;
+}
+
+.notification-info {
+  border-left: 4px solid #17a2b8;
+}
+
+.notification-warning {
+  border-left: 4px solid #ffc107;
+}
+
+.notification-icon {
+  margin-right: 12px;
+  font-size: 18px;
+}
+
+.notification-content {
+  flex: 1;
+  font-size: 14px;
+  color: #333;
+}
+
+@media (max-width: 576px) {
+  .notifications-container {
+    width: calc(100% - 40px);
+    top: 60px;
+    right: 20px;
+  }
+}

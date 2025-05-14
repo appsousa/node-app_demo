@@ -1,0 +1,87 @@
+.ai-actions-container {
+  padding: 0 15px 15px;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.action-card {
+  background-color: #f8f9ff;
+  border: 1px solid #e1e5ff;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.action-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.action-header h4 {
+  margin: 0;
+  font-size: 15px;
+  color: #333;
+}
+
+.status-badge {
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.status-badge.executing {
+  background-color: #fff8e6;
+  color: #e6a700;
+}
+
+.status-badge.completed {
+  background-color: #e7f9ed;
+  color: #28a745;
+}
+
+.action-details {
+  margin-bottom: 12px;
+}
+
+.action-details p {
+  margin: 5px 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.progress-container {
+  height: 8px;
+  background-color: #eaeaea;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 10px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #4a6cf7;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  position: absolute;
+  right: 0;
+  top: -18px;
+  font-size: 11px;
+  color: #666;
+}
